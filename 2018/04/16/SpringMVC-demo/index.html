@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-16T12:33:24.461Z">
+<meta property="og:updated_time" content="2018-04-16T12:35:10.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IntelliJ IDEA">
 <meta name="twitter:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
@@ -333,8 +333,9 @@
 <li>使用spring mvc进行开发，使用tomcat容器，通过url映射寻找view的时候，会报错NoClassDefFoundError: javax/servlet/jsp/jstl/core/Config，如果随便去找个jstl包过来放入web-inf/lib会报错，正确的下载地址在<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="noopener">这里</a>，下载jakarta-taglibs-standard-1.1.2.zip这个包，解压缩后将standard和jstl两个包放入lib下即可。</li>
 <li>在module的web-WEB-INF下新建 classes和lib文件夹（新版本中的lib在根目录下）</li>
 <li>IDEA默认是不会像eclipse那样在web-inf下生成lib文件夹和classes文件夹的的，需要我们手动的创建，并将我们根目录下的lib目录下的内容复制到web-inf/lib文件夹内。<br>并且还需要进行额外配置。<br>点击file-&gt;Project Struture 修改project下的paths 修改完毕点击OK</li>
-<li>然后点击dependencis-&gt; 绿色的+ -&gt; 选择第一项，选择刚才我们在WEB-INF下创建的lib文件夹<h2 id="运行结果：失败"><a href="#运行结果：失败" class="headerlink" title="运行结果：失败"></a>运行结果：失败</h2>error：Type Status Report</li>
+<li>然后点击dependencis-&gt; 绿色的+ -&gt; 选择第一项，选择刚才我们在WEB-INF下创建的lib文件夹</li>
 </ul>
+<h2 id="运行结果：失败"><a href="#运行结果：失败" class="headerlink" title="运行结果：失败"></a>运行结果：失败</h2><p>error：Type Status Report</p>
 <p>Message /WEB-INF/jsphello.jsp</p>
 <p>Description The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p>
 
