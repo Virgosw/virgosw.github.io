@@ -86,10 +86,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-16T12:37:27.061Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/Virgosw/image/master/springdemo%E7%BB%93%E6%9E%9C.png">
+<meta property="og:updated_time" content="2018-04-16T15:10:17.665Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IntelliJ IDEA">
 <meta name="twitter:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Virgosw/image/master/springdemo%E7%BB%93%E6%9E%9C.png">
 
 
 
@@ -311,7 +313,7 @@
 <h2 id="编写controller与JSP页面"><a href="#编写controller与JSP页面" class="headerlink" title="编写controller与JSP页面"></a>编写controller与JSP页面</h2><p> MVC框架有model、view、controller三部分组成。model一般为一些基本的Java Bean，view用于进行相应的页面显示，controller用于处理网站的请求。</p>
 <ul>
 <li>在项目的src目录创建一个包用于存放controller,我命名为controller</li>
-<li>在新建的包中，创建一个HelloController类<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">@RequestMapping(value = <span class="string">"/hello"</span>,method = RequestMethod.GET)</span><br><span class="line">public class HelloController &#123;</span><br><span class="line">    @RequestMapping(value = <span class="string">"/hello"</span>,method = RequestMethod.GET)</span><br><span class="line">    public String printHello(ModelMap model)&#123;</span><br><span class="line">        model.addAttribute(<span class="string">"msg"</span>,<span class="string">"Spring MVC Hello World"</span>);</span><br><span class="line">        model.addAttribute(<span class="string">"name"</span>,<span class="string">"SunWu"</span>);</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>在新建的包中，创建一个HelloController类<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@Controller</span><br><span class="line">@RequestMapping(value = <span class="string">"/hello"</span>,method = RequestMethod.GET)</span><br><span class="line">public class HelloController &#123;</span><br><span class="line">    @RequestMapping(value = <span class="string">"/hello"</span>,method = RequestMethod.GET)</span><br><span class="line">    public String printHello(ModelMap model)&#123;</span><br><span class="line">        model.addAttribute(<span class="string">"msg"</span>,<span class="string">"Spring 3 MVC Hello World"</span>);</span><br><span class="line">        model.addAttribute(<span class="string">"name"</span>,<span class="string">"SunWu"</span>);</span><br><span class="line">        <span class="built_in">return</span> <span class="string">"hello"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <p><strong>1.@Controller注解：采用注解的方式定义该类为处理请求的Controller类；<br>2.@RequestMapping解：用于定义一个请求映射，value为请求的url，method用以指定该请求类型，一般为get和post，代码中要调用printHello方法，即可访问 hello/hello<br>3.return “hello”：处理完该请求后返回的页面，此请求返回 hello.jsp页面。</strong></p>
@@ -319,6 +321,7 @@
 <li>接下来删除web目录下的index.jsp,在web/WEB-INF中创建一个views目录，然后创建一个hello.jsp文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page contentType=<span class="string">"text/html;charset=UTF-8"</span> language=<span class="string">"java"</span> %&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;<span class="variable">$&#123;msg&#125;</span>&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h1&gt;<span class="variable">$&#123;msg&#125;</span>&lt;/h1&gt;</span><br><span class="line">&lt;span&gt;<span class="variable">$&#123;name&#125;</span>&lt;/span&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a>
 <h2 id="配置servlet-xml"><a href="#配置servlet-xml" class="headerlink" title="配置servlet.xml"></a>配置servlet.xml</h2><ul>
 <li>首先要指定下controller所在的包，这样spring mvc会扫描其中的注解<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-package=<span class="string">"controller"</span>/&gt;</span><br></pre></td></tr></table></figure>
 </li>
@@ -336,9 +339,7 @@
 <li>IDEA默认是不会像eclipse那样在web-inf下生成lib文件夹和classes文件夹的的，需要我们手动的创建，并将我们根目录下的lib目录下的内容复制到web-inf/lib文件夹内。<br>并且还需要进行额外配置。<br>点击file-&gt;Project Struture 修改project下的paths 修改完毕点击OK</li>
 <li>然后点击dependencis-&gt; 绿色的+ -&gt; 选择第一项，选择刚才我们在WEB-INF下创建的lib文件夹</li>
 </ul>
-<h2 id="运行结果：失败"><a href="#运行结果：失败" class="headerlink" title="运行结果：失败"></a>运行结果：失败</h2><p>error：Type Status Report</p>
-<p>Message /WEB-INF/jsphello.jsp</p>
-<p>Description The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p>
+<h2 id="运行结果：成功"><a href="#运行结果：成功" class="headerlink" title="运行结果：成功"></a>运行结果：成功</h2><p><img src="https://raw.githubusercontent.com/Virgosw/image/master/springdemo%E7%BB%93%E6%9E%9C.png" alt="springdemo运行结果"></p>
 
       
     </div>
@@ -485,7 +486,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的SpringMVC-demo"><span class="nav-number">1.</span> <span class="nav-text">一个简单的SpringMVC demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建工程"><span class="nav-number">1.1.</span> <span class="nav-text">创建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写controller与JSP页面"><span class="nav-number">1.2.</span> <span class="nav-text">编写controller与JSP页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置servlet-xml"><span class="nav-number">1.3.</span> <span class="nav-text">配置servlet.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Tomcat并运行"><span class="nav-number">1.4.</span> <span class="nav-text">配置Tomcat并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.5.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果：失败"><span class="nav-number">1.6.</span> <span class="nav-text">运行结果：失败</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的SpringMVC-demo"><span class="nav-number">1.</span> <span class="nav-text">一个简单的SpringMVC demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建工程"><span class="nav-number">1.1.</span> <span class="nav-text">创建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写controller与JSP页面"><span class="nav-number">1.2.</span> <span class="nav-text">编写controller与JSP页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置servlet-xml"><span class="nav-number">1.3.</span> <span class="nav-text">配置servlet.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Tomcat并运行"><span class="nav-number">1.4.</span> <span class="nav-text">配置Tomcat并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.5.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果：成功"><span class="nav-number">1.6.</span> <span class="nav-text">运行结果：成功</span></a></li></ol></li></ol></div>
             
 
           </div>
