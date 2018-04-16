@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="IntelliJ IDEA一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC">
+<meta name="description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="IntelliJ IDEA">
 <meta property="og:url" content="http://yoursite.com/2018/04/16/SpringMVC-demo/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="IntelliJ IDEA一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC">
+<meta property="og:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-16T12:07:18.564Z">
+<meta property="og:updated_time" content="2018-04-16T12:10:49.332Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="IntelliJ IDEA一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC">
+<meta name="twitter:title" content="IntelliJ IDEA">
+<meta name="twitter:description" content="一个简单的SpringMVC demo创建工程 打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next  给project起一个名字,我命名为SpringHello,点击Finnish  首先打开web/WEB-INF目录下的web.xml文件，如下，把url-pattern的值改为/，用于拦截请求，并交由Spring MVC的后台控制器来处理。这一项配">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title> | Hexo</title>
+  <title>IntelliJ IDEA | Hexo</title>
   
 
 
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">IntelliJ IDEA</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,7 @@
       
 
       
-        <hr>
-<h2 id="IntelliJ-IDEA"><a href="#IntelliJ-IDEA" class="headerlink" title="IntelliJ IDEA"></a>IntelliJ IDEA</h2><h1 id="一个简单的SpringMVC-demo"><a href="#一个简单的SpringMVC-demo" class="headerlink" title="一个简单的SpringMVC demo"></a>一个简单的SpringMVC demo</h1><h2 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h2><ul>
+        <h1 id="一个简单的SpringMVC-demo"><a href="#一个简单的SpringMVC-demo" class="headerlink" title="一个简单的SpringMVC demo"></a>一个简单的SpringMVC demo</h1><h2 id="创建工程"><a href="#创建工程" class="headerlink" title="创建工程"></a>创建工程</h2><ul>
 <li><p>打开IntelliJ IDEA 新建一个project，选择spring MVC,然后点击next</p>
 </li>
 <li><p>给project起一个名字,我命名为SpringHello,点击Finnish</p>
@@ -333,8 +332,10 @@
 <li>使用spring mvc进行开发，使用tomcat容器，通过url映射寻找view的时候，会报错NoClassDefFoundError: javax/servlet/jsp/jstl/core/Config，如果随便去找个jstl包过来放入web-inf/lib会报错，正确的下载地址在<a href="http://archive.apache.org/dist/jakarta/taglibs/standard/binaries/" target="_blank" rel="noopener">这里</a>，下载jakarta-taglibs-standard-1.1.2.zip这个包，解压缩后将standard和jstl两个包放入lib下即可。</li>
 <li>在module的web-WEB-INF下新建 classes和lib文件夹（新版本中的lib在根目录下）</li>
 <li>IDEA默认是不会像eclipse那样在web-inf下生成lib文件夹和classes文件夹的的，需要我们手动的创建，并将我们根目录下的lib目录下的内容复制到web-inf/lib文件夹内。<br>并且还需要进行额外配置。<br>点击file-&gt;Project Struture 修改project下的paths 修改完毕点击OK</li>
-<li>然后点击dependencis-&gt; 绿色的+ -&gt; 选择第一项，选择刚才我们在WEB-INF下创建的lib文件夹</li>
+<li>然后点击dependencis-&gt; 绿色的+ -&gt; 选择第一项，选择刚才我们在WEB-INF下创建的lib文件夹<h2 id="运行结果：失败"><a href="#运行结果：失败" class="headerlink" title="运行结果：失败"></a>运行结果：失败</h2>error：<br>Type Status Report</li>
 </ul>
+<p>Message /WEB-INF/jsphello.jsp</p>
+<p>Description The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p>
 
       
     </div>
@@ -481,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IntelliJ-IDEA"><span class="nav-number">1.</span> <span class="nav-text">IntelliJ IDEA</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的SpringMVC-demo"><span class="nav-number"></span> <span class="nav-text">一个简单的SpringMVC demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建工程"><span class="nav-number">1.</span> <span class="nav-text">创建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写controller与JSP页面"><span class="nav-number">2.</span> <span class="nav-text">编写controller与JSP页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC框架有model、view、controller三部分组成。model一般为一些基本的Java-Bean，view用于进行相应的页面显示，controller用于处理网站的请求。"><span class="nav-number">2.1.</span> <span class="nav-text">MVC框架有model、view、controller三部分组成。model一般为一些基本的Java Bean，view用于进行相应的页面显示，controller用于处理网站的请求。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置servlet-xml"><span class="nav-number">3.</span> <span class="nav-text">配置servlet.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Tomcat并运行"><span class="nav-number">4.</span> <span class="nav-text">配置Tomcat并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个简单的SpringMVC-demo"><span class="nav-number">1.</span> <span class="nav-text">一个简单的SpringMVC demo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建工程"><span class="nav-number">1.1.</span> <span class="nav-text">创建工程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编写controller与JSP页面"><span class="nav-number">1.2.</span> <span class="nav-text">编写controller与JSP页面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVC框架有model、view、controller三部分组成。model一般为一些基本的Java-Bean，view用于进行相应的页面显示，controller用于处理网站的请求。"><span class="nav-number">1.2.1.</span> <span class="nav-text">MVC框架有model、view、controller三部分组成。model一般为一些基本的Java Bean，view用于进行相应的页面显示，controller用于处理网站的请求。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置servlet-xml"><span class="nav-number">1.3.</span> <span class="nav-text">配置servlet.xml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置Tomcat并运行"><span class="nav-number">1.4.</span> <span class="nav-text">配置Tomcat并运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.5.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果：失败"><span class="nav-number">1.6.</span> <span class="nav-text">运行结果：失败</span></a></li></ol></li></ol></div>
             
 
           </div>
